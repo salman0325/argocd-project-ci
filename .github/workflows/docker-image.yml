@@ -165,7 +165,7 @@ jobs:
         with:
           repository: salman0325/argocd-project-cd.git
           ref: main
-          token: ${{ secrets.CD_REPO_TOKEN }}
+          token: ${{ secrets.CD_REPO_TOKEN1 }}
           path: cd
 
       - name: Bump images in manifests (safe)
