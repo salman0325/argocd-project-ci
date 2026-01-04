@@ -127,7 +127,7 @@ jobs:
         yq -i '
           (. | select(.kind=="Deployment")
              | .spec.template.spec.containers[]
-             | select(.name=="argocd-k8s-backend")
+             | select(.name=="backend")
              | .image) = "salmandevops290/argocd-k8s-backend:" + strenv(IMAGE_TAG)
         ' k8s-prod/backend.yaml
 
@@ -135,7 +135,7 @@ jobs:
         yq -i '
           (. | select(.kind=="Deployment")
              | .spec.template.spec.containers[]
-             | select(.name=="argocd-k8s-frontend")
+             | select(.name=="frontend")
              | .image) = "salmandevops290/argocd-k8s-frontend:" + strenv(IMAGE_TAG)
         ' k8s-prod/frontend.yaml
 
