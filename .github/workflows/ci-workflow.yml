@@ -71,8 +71,8 @@ jobs:
           context: ./api  # Docker build context backend folder
           push: true     # build ke baad image push karna hai DockerHub pe
           tags: |
-            salmandevops290/argocd-k8s-backend:latest  # latest tag ke sath
-            salmandevops290/argocd-k8s-backend:${{ env.IMAGE_TAG }}  # specific git commit SHA tag ke sath
+            salmandevops290/argocd-k8s-backend:latest  
+            salmandevops290/argocd-k8s-backend:${{ env.IMAGE_TAG }}  
 
   build_frontend_docker_image_and_push:
     runs-on: ubuntu-latest
